@@ -1,0 +1,20 @@
+Services: 
+- type: web
+name : Api-petshop
+runtime: node
+plan: free
+bluidCommand: "npm install"
+startCommand: "npm start"
+autoDeploy: true
+
+envVars:
+  - key: NODE_ENV
+    value: "production"
+  - key: MONGO_URI
+    sync: false
+#  - key: JWT_SECRET
+#  sync: false || generationValue: true
+#  - key: JWT_EXPIRES_IN
+#  value: "1d"
+#  - key: BCRYPT_SALT
+#  value: 10
