@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Serviço - PetShop Elite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🐾</div>
+        <span>PetShop Elite</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="agendar.html" class="active">Agendar</a></li>
+          <li><a href="agendamentos.html">Agendamentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="form-page">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-header">
+          <h1>Agendar Serviço</h1>
+          <p>Preencha os dados abaixo para agendar o melhor momento para o seu pet</p>
+        </div>
+
+        <form id="agendamentoForm" class="form-card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nomePet">Nome do Pet</label>
+              <input type="text" id="nomePet" name="nomePet" placeholder="Ex: Rex" required>
+            </div>
+            <div class="form-group">
+              <label for="especie">Espécie</label>
+              <select id="especie" name="especie" required>
+                <option value="">Selecione...</option>
+                <option value="Cão">Cão</option>
+                <option value="Gato">Gato</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nomeDono">Nome do Dono</label>
+              <input type="text" id="nomeDono" name="nomeDono" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label for="telefoneDono">Telefone</label>
+              <input type="tel" id="telefoneDono" name="telefoneDono" placeholder="(11) 99999-9999" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="servico">Serviço</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione...</option>
+                <option value="Banho">Banho</option>
+                <option value="Tosa">Tosa</option>
+                <option value="Banho e Tosa">Banho e Tosa</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" required>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="index.html" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Agendar Serviço</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PetShop Elite. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

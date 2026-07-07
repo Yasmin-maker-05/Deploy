@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamentos - PetShop Elite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🐾</div>
+        <span>PetShop Elite</span>
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="agendar.html">Agendar</a></li>
+          <li><a href="agendamentos.html" class="active">Agendamentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="table-page">
+    <div class="container">
+      <div class="table-header">
+        <h1>Meus Agendamentos</h1>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Buscar por nome do pet...">
+          <a href="agendar.html" class="btn btn-primary btn-sm">Novo Agendamento</a>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <div class="table-responsive">
+          <table id="agendamentosTable">
+            <thead>
+              <tr>
+                <th>Pet</th>
+                <th>Espécie</th>
+                <th>Dono</th>
+                <th>Telefone</th>
+                <th>Serviço</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="8" class="loading">
+                  <div class="spinner"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 PetShop Elite. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

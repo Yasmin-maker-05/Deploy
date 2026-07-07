@@ -1,17 +1,23 @@
 import express from "express";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 import Agendamento from "./models/agendamento.js";
 import conectarDB from "./db.js";
 
-dotenv.config({path: "../.env"});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({path: path.join(__dirname, "../.env")});
 const app = express();
 const PORT = process.env.PORT;
 conectarDB();
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", (req, res) => {
-  res.json({ mensagem: "API do Petshop está no ar!" });
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 app.post("/agendamentos", async (req, res) => {
